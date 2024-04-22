@@ -1,7 +1,7 @@
 # -Python-Numerical-Literal-Checker
- Python Numerical Literal Checker
  
- Assigned to design an NFA to recognize the following Python numerical literals and write code to implement the NFA (or equivalent DFA). 
+ ## Description
+ Assigned to design an NFA to recognize the following Python numerical literals and write code to implement the NFA (or equivalent DFA). Program itself is coded in Java.
 
  ## Group Members
  - Kenia Velasco ([@qennya](https://github.com/qennya))
@@ -11,7 +11,7 @@
  - Task 1: (60 pts) Recognize Python decimal integer (Aidan Kumar)
  - Task 2: (40 pts) Expand your program to recognize Python octal and hexadecimal integer (Kenia V. & Aidan K. )
 
- ## Code Versions
+## Versions/Tags
 
 
  ## Features
