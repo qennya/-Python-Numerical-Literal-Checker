@@ -13,6 +13,7 @@
  ## Tasks Completed
  - Task 1: (60 pts) Recognize Python decimal integer (Aidan Kumar)
  - Task 2: (40 pts) Expand your program to recognize Python octal and hexadecimal integers (Kenia V. & Aidan K.)
+ - Task 3: (50 pts) Expand program to recognize python floating point literals (Aidan K. & Kenia V.)
 
 ## Versions/Tags
  - v1.0: Implements task 1 in java.
