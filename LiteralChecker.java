@@ -17,8 +17,7 @@ public class LiteralChecker {
                 }
             }
         }
-    
-        //DONE
+
         private static boolean isValidDecimal(String input) {
             boolean underscoreFlag = false;
             if (input.length() == 0) return false; //if empty
@@ -51,7 +50,6 @@ public class LiteralChecker {
             return true;
         }
        
-        //DONE
         private static boolean isValidOctal(String input) {
             if (input == null || input.length() < 2) {  //if empty or less than 2 -> false
                 return false;
@@ -89,7 +87,6 @@ public class LiteralChecker {
             return true;
         }
     
-            //DONE
         private static boolean isValidHexadecimal(String input) {
             if (input == null || input.length() < 2) {  //if empty or less than 2 -> false
                 return false;
