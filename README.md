@@ -12,7 +12,8 @@
  - Task 2: (40 pts) Expand your program to recognize Python octal and hexadecimal integer (Kenia V. & Aidan K. )
 
 ## Versions/Tags
-
+ - v1.0: Implements task 1 in java.
+ - v2.0: Implements task 1 and task 2 in java. Includes NFA jff and NFA jpg.
 
  ## Features
 - Validates decimal integer literals.
