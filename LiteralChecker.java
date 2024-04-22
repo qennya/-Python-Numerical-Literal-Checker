@@ -89,12 +89,41 @@ public class LiteralChecker {
             return true;
         }
     
-            //NOT DONE
+            //DONE
         private static boolean isValidHexadecimal(String input) {
-            if (input.length() < 3 || input.charAt(0) != '0' || (input.charAt(1) != 'x' && input.charAt(1) != 'X')) return false;
-            for (char e : input.substring(2).toCharArray()) {
-                if (!((e >= '0' && e <= '9') || (e >= 'a' && e <= 'f') || (e >= 'A' && e <= 'F'))) return false;
+            if (input == null || input.length() < 2) {  //if empty or less than 2 -> false
+                return false;
             }
+        
+            if (!(input.charAt(0) == '0' && (input.charAt(1) == 'X' || input.charAt(1) == 'x'))) { // if no 0x or 0X -> false
+                return false;
+            }
+        
+          
+            char lastChar = input.charAt(input.length() - 1); //checks last character
+            if ((lastChar < '0' || lastChar > '9') && (lastChar < 'a' || lastChar > 'f') && (lastChar < 'A' || lastChar > 'F')) {    // if last character is no within 0-9 a-f A-F -> false
+                return false;
+            }
+        
+            boolean underscoreSeen = false; //flag in case of underscore appearence
+        
+            for (int i = 2; i < input.length() - 1; i++) { // after 0x or 0X, loops char
+                char e = input.charAt(i);
+        
+                
+                if (e == '_') {// If an underscore appears
+
+                    if (underscoreSeen) {
+                        return false; // Prevents 2 underscores in a row 
+                    }
+                    underscoreSeen = true;
+                } else if ((e < '0' || e > '9') && (e < 'a' || e > 'f') && (e < 'A' || e > 'F')) { //ends with non alphabet char
+                    return false; 
+                } else {
+                    underscoreSeen = false; // Reset the underscore flag
+                }
+            }
+        
             return true;
         }
     }
