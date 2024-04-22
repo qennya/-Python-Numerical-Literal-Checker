@@ -18,13 +18,34 @@ public class LiteralChecker {
             }
         }
     
-        //NOT DONE
+        //DONE
         private static boolean isValidDecimal(String input) {
+            boolean underscoreFlag = false;
             if (input.length() == 0) return false; //if empty
-            if (input.charAt(0) == '0' && input.length() > 1) return false; 
+            if (input.charAt(input.length()-1)=='_') return false; //if last char is '_'
+            if (input.charAt(0) == '0') {
+                for(char e : input.toCharArray()) {
+                    if(underscoreFlag && e=='_') {
+                        return false;
+                    }
+                    underscoreFlag = false;
+                    if(e != '0' && e != '_') { 
+                        return false;
+                    } else if(e=='_'){
+                        underscoreFlag = true;
+                    }
+                }
+                return true;
+            }
             for (char e : input.toCharArray()) {
-                if (e < '0' || e > '9'){
+                if(underscoreFlag && e=='_') {
                     return false;
+                }
+                underscoreFlag = false;
+                if ((e < '0' || e > '9') && e!='_'){
+                    return false;
+                } else if (e=='_'){
+                    underscoreFlag = true;
                 }
             }
             return true;
