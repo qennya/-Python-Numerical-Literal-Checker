@@ -18,6 +18,7 @@
 ## Versions/Tags
  - v1.0: Implements task 1 in java.
  - v2.0: Implements task 1 and task 2 in java. Includes NFA jff and NFA jpg.
+ - v3.0: Implements task 3 as a separate program in java. 
 
  ## Features
 - Takes in user input as a string via a Scanner object.
