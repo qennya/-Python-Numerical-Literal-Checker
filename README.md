@@ -15,3 +15,6 @@
 
 
  ## Features
+- Validates decimal integer literals.
+- Validates octal integer literals.
+- Validates hexadecimal integer literals.
